@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situação do aluno</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <section class="container">
+        <h1>Situação do aluno</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Média</th>
+                    <th>Situação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Abaixo de 3.0</td>
+                    <td class="situacao" id="reprovado">reprovado</td>
+                </tr>
+                <tr>
+                    <td>Entre 3.0 e 6.0</td>
+                    <td class="situacao" id="recuperacao">recuperação</td>
+                </tr>
+                <tr>
+                    <td>Acima de 6.0</td>
+                    <td class="situacao" id="aprovado">aprovado</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <form action="/" id="form" method="post">
+            <label for="nota1">Nota 1:</label>
+            <input type="text" id="nota1" name="nota1" placeholder="Informe a primeira nota do aluno">
+
+            <label for="nota2">Nota 2:</label>
+            <input type="text" id="nota2" name="nota2" placeholder="Informe a segunda nota do aluno">
+
+            <button type="submit" onclick="calcMedia()">Calcular média</button>
+        </form>
+
+        <div id="res">
+
+        </div>
+    </section>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
